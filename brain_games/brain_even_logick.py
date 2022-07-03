@@ -1,11 +1,12 @@
 import prompt
 from random import randint
+import random
 
 def game_logick():
 	print('Welcome to the Brain Games!')
 	name = prompt.string('May I have your name? ')
 	print('Hello ' + name + '!')
-	print('Anser "yes" if the number is even, otherwise answer "no".')
+	print('Answer "yes" if the number is even, otherwise answer "no".')
 	n = 0
 	while n != 3:
 		b = randint(0, 50)
@@ -23,4 +24,41 @@ def game_logick():
 	if n == 3:
 		print('Congratulations ' + name + '!')
 				
-			
+def game_calc():
+	print('Welcome to the Brain Games!')
+	name = prompt.string('May I have your name? ')
+	print('Hello ' + name + '!')
+	print('What is the result of the expression?')
+	n = 0
+	while n != 3:
+		a = randint(0, 50)
+		b = randint(0, 50)
+		c = random.choice(['+', '-', '*'])
+		print('Question: ' + str(a) + ' ' + c + ' ' + str(b))
+		if c == '+':
+			answer_logic = a + b
+		elif c == '-':
+			answer_logic = a - b
+		elif c == '*':
+			answer_logic = a * b
+		answer = prompt.string('Your answer: ')
+		if int(answer) == answer_logic:
+			print('Correct')
+			n += 1
+		elif int(answer_logic) != answer:
+			print(answer + " is wrong answer ;(. Correct answer was " + str(answer_logic) + ".\nLet's try again " + name + '!')
+			break
+	if n == 3:
+		print('Congratulations ' + name + '!')
+
+
+
+		 
+
+	 
+	 
+	 
+	 
+	 
+	 
+	 
