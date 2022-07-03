@@ -51,6 +51,33 @@ def game_calc():
 	if n == 3:
 		print('Congratulations ' + name + '!')
 
+def game_grd():
+	print('Welcome to the Brain Games!')
+	name = prompt.string('May I have your name? ')
+	print('Hello ' + name + '!')
+	print('Find the greatest common divisor of given numbers.')
+	n = 0
+	while n != 3:
+		a = randint(0, 100)
+		b = randint(0, 100)
+		print('Question ' + str(a) + ' ' + str(b))
+		while a != b:
+			if a > b:
+				a = a - b
+			else:
+				b = b - a
+		answer = prompt.string('Your answer: ')
+		if int(answer) == a:
+			print('Correct!')
+			n += 1
+		elif int(answer) != a:
+			print(answer + " is wrong answer ;(. Correct answer was " + str(a) + ".\nLet's try again " + name + '!')
+			break
+	if n == 3:
+		print('Congratulations ' + name + '!')
+
+
+
 
 
 		 
