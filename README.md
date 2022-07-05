@@ -4,3 +4,4 @@ CodeClimate Maintainability (<a href="https://codeclimate.com/github/Noxsero26/p
 Recording brain-even https://asciinema.org/a/YAKkuwZtKtDGHD0AXwUGNyq94
 Recorded brain-calc https://asciinema.org/a/rIPAGVXelo9rZouePqUWOlHlF
 Recorded brain-gcd https://asciinema.org/a/tGJxeBHH8bhnIorz0irlbjnFa
+Recorded brain-progression https://asciinema.org/a/741D6yXHSjdtc13hJ94CBqIY7

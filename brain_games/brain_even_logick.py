@@ -2,6 +2,7 @@ import prompt
 from random import randint
 import random
 
+
 def game_logick():
 	print('Welcome to the Brain Games!')
 	name = prompt.string('May I have your name? ')
@@ -23,6 +24,7 @@ def game_logick():
 			break
 	if n == 3:
 		print('Congratulations ' + name + '!')
+
 				
 def game_calc():
 	print('Welcome to the Brain Games!')
@@ -51,6 +53,7 @@ def game_calc():
 	if n == 3:
 		print('Congratulations ' + name + '!')
 
+
 def game_grd():
 	print('Welcome to the Brain Games!')
 	name = prompt.string('May I have your name? ')
@@ -72,6 +75,34 @@ def game_grd():
 			n += 1
 		elif int(answer) != a:
 			print(answer + " is wrong answer ;(. Correct answer was " + str(a) + ".\nLet's try again " + name + '!')
+			break
+	if n == 3:
+		print('Congratulations ' + name + '!')
+
+
+def func_progression():
+	print('Welcome to the Brain Games!')
+	name = prompt.string('May I have your name? ')
+	print('Hello ' + name + '!')
+	print('What number is missing in the progression?')
+	n = 0
+	while n != 3:
+		result = []
+		step = randint(2, 5)
+		for i in range(randint(10, 15), randint(60, 70), step):
+			result.append(i)
+		random_position = randint(0, 5)
+		right_answer = result[random_position]
+		result[random_position] = '..'
+		result_str = ' '.join(map(str, result))
+		result_str = result_str[0:30]
+		print('Question: ' + result_str)
+		answer = prompt.string('Your answer: ')
+		if answer == str(right_answer):
+			print('Correct!')
+			n += 1
+		elif answer != str(right_answer):
+			print(answer + " is wrong answer ;(. Correct answer was " + str(right_answer) + ".\nLet's try again " + name + '!')
 			break
 	if n == 3:
 		print('Congratulations ' + name + '!')
