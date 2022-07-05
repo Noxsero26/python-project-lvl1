@@ -108,15 +108,35 @@ def func_progression():
 		print('Congratulations ' + name + '!')
 
 
-
-
-
-		 
-
-	 
-	 
-	 
-	 
-	 
-	 
-	 
+def func_simple_numbers():
+	print('Welcome to the Brain Games!')
+	name = prompt.string('May I have your name? ')
+	print('Hello ' + name + '!')
+	print('Answer "yes" if given number is prime. Otherwise answer "no".')
+	n = 0
+	number_prime = 0
+	while n!= 3:
+		number = randint(0, 100)
+		print('Question: ' + str(number))
+		answer = prompt.string('Your answer: ')
+		for i in range(2, number + 1):
+			if number % i == 0:
+				break
+			else:	
+				number_prime = 1
+		if number_prime == 1:
+			if answer =='yes':
+				print('Correct!')
+				n += 1
+			elif answer != 'yes':
+				print(answer + " is wrong answer ;(. Correct answer was 'yes' .\nLet's try again " + name + '!')		
+				break
+		else:
+			if answer =='no':
+				print('Correct!')
+				n += 1
+			elif answer != 'no':
+				print(answer + " is wrong answer ;(. Correct answer was 'no' .\nLet's try again " + name + '!')		
+				break					
+	if n == 3:
+		print('Congratulations ' + name + '!')
