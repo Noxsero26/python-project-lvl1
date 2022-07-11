@@ -17,7 +17,7 @@ def game_logick():
 			print('Correct!')
 			n += 1
 		elif b % 2 == 0 and answer != 'yes':
-			print(answer +  " is wrong answer ;(. Correct answer was 'yes'.\nLet's try again " + name + '!')
+			print(answer + " is wrong answer ;(. Correct answer was 'yes'.\nLet's try again " + name + '!')
 			break
 		elif b % 2 != 0 and answer != 'no':
 			print(answer + " is wrong answer ;(. Correct answer was 'no'.\nLet's try again " + name + '!')
@@ -114,25 +114,30 @@ def func_simple_numbers():
 	print('Hello ' + name + '!')
 	print('Answer "yes" if given number is prime. Otherwise answer "no".')
 	n = 0
-	while n!= 3:
+	while n != 3:
 		number_prime = 0
 		number = randint(0, 100)
 		print('Question: ' + str(number))
 		answer = prompt.string('Your answer: ')
-		for i in range(2, (number + 1)):
+		range_m = range(2, number + 1)
+		for i in range_m:
 			if number % i == 0:
+				if number == i:
+					number_prime = 1
+					break
+				number_prime = 0
 				break
-			else:	
+			elif number % i != 0:
 				number_prime = 1
 		if number_prime == 1:
-			if answer =='yes':
+			if answer == 'yes':
 				print('Correct!')
 				n += 1
 			elif answer != 'yes':
 				print(answer + " is wrong answer ;(. Correct answer was 'yes' .\nLet's try again " + name + '!')		
 				break
 		else:
-			if answer =='no':
+			if answer == 'no':
 				print('Correct!')
 				n += 1
 			elif answer != 'no':
@@ -140,5 +145,3 @@ def func_simple_numbers():
 				break					
 	if n == 3:
 		print('Congratulations ' + name + '!')
-		
-		
