@@ -114,12 +114,12 @@ def func_simple_numbers():
 	print('Hello ' + name + '!')
 	print('Answer "yes" if given number is prime. Otherwise answer "no".')
 	n = 0
-	number_prime = 0
 	while n!= 3:
+		number_prime = 0
 		number = randint(0, 100)
 		print('Question: ' + str(number))
 		answer = prompt.string('Your answer: ')
-		for i in range(2, number + 1):
+		for i in range(2, (number + 1)):
 			if number % i == 0:
 				break
 			else:	
@@ -140,3 +140,5 @@ def func_simple_numbers():
 				break					
 	if n == 3:
 		print('Congratulations ' + name + '!')
+		
+		
